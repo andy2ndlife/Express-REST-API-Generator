@@ -30,5 +30,8 @@ module.exports = {
     SQLHost: process.env.SQL_HOST || 'localhost',
     SQLPort: process.env.SQL_PORT || 3306,
     SQLDriver: process.env.SQL_DRIVER || 'mysql', //'mysql'|'sqlite'|'postgres'|'mssql'
-    SQLTimezone: process.env.SQL_TIMEZONE || '+01:00'
+    SQLTimezone: process.env.SQL_TIMEZONE || '+01:00',
+    logglyToken: process.env.LOGGLY_TOKEN || false,
+    logglySubdomain: process.env.LOGGLY_SUBDOMAIN || false,
+    logglyTag: process.env.LOGGLY_TAG || false
 };
