@@ -112,7 +112,7 @@ var <%= service %>sController = {};
         if(sort){
             delete query.sort;
         }
-        var populate = query.populate; // Samples: 'name location' will populate name and location references. only supports this for now | 'name', 'firstname' will populate name referenece and only pick the firstname attribute
+        var populate = query.populate; // Samples: 'name location' will populate name and location references. only supports this for now | 'name', 'firstname' will populate name reference and only pick the firstname attribute
         if(populate){
             delete query.populate;
         }
@@ -188,7 +188,7 @@ var <%= service %>sController = {};
     var query = req.query;
     var populate;
     if(query){
-        populate = query.populate; // Samples: 'name location' will populate name and location references. only supports this for now | 'name', 'firstname' will populate name referenece and only pick the firstname attribute
+        populate = query.populate; // Samples: 'name location' will populate name and location references. only supports this for now | 'name', 'firstname' will populate name reference and only pick the firstname attribute
     }
     var question = <%= service %>s.findById(id);
     if(populate){

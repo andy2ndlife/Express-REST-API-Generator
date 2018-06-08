@@ -205,7 +205,7 @@ router.use(bodyParser.text());
 // Log requests here
 router.use(function(req,res,next){
   var ipAddress = req.ip;
-  req.requestId = fnv.hash(new Date().valueOf() + ipAddress, 128).str();
+  req.requestId = fnv.hash(Math.floor(100000 + Math.random() * 900000) + '' + Date.now() + '' + ipAddress, 128).str();
   res.set('X-Request-Id',req.requestId);
 
   var reqLog = {
